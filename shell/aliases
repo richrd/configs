@@ -1,2 +1,43 @@
+#
+# Useful aliases for easing general tasks
+#
+# Main goal is to ease common tasks and instead of just renaming commands
+# Renaming commands makes you forget their real names which hurts
+# your productivity if aliases aren't available, so avoid that.
+# 
+
+#
+# Directories & Files
+#
+
+# Change Directory
+alias cd.="cd -" # Toggle between current and previous directory
+alias cd..="cd .."
+alias cd.2="cd ../.."
+alias cd.3="cd ../../.."
+alias cd.4="cd ../../../.."
+alias cd.5="cd ../../../../.."
+alias cd.6="cd ../../../../../.."
+
+# Create directory and cd into it
+function mkd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
+
+
+#
+# Screen
+#
+
+# Resume
 alias sr="screen -rd"
+
+# New named session
 alias sn="screen -S"
+
+
+#
+# OS Specific
+#
+
+alias apt-upgrade="sudo apt-get update & sudo apt-get upgrade"
+alias apt-install="sudo apt-get install"
+
